@@ -1,30 +1,23 @@
 # Lost Mines of Phandelver · Party Log
 
-Μικρό static site για το shared log της παρέας.
+Static GitHub Pages site for the party's shared log.
 
-## Αλλαγή του επόμενου ραντεβού
+## Update the next session
 
-Άνοιξε το `data/sessions.json` και βάλε το `dateTime` της επόμενης συνάντησης:
+Edit `data/sessions.json`:
 
 ```json
 "dateTime": "2026-09-05T20:30:00+03:00"
 ```
 
-Αν το αφήσεις `null`, το countdown δεν εμφανίζεται και η σελίδα δείχνει σχετικό μήνυμα.
+Leave it as `null` to hide the countdown and show the no-date message.
 
-## Προσθήκη / αλλαγή sessions
+## Update the timeline
 
-Όλα τα entries είναι στο `data/sessions.json`. Για κάθε session χρειάζονται:
-
-- `session`: αριθμός
-- `title`: τίτλος
-- `events`: λίστα με τα γεγονότα
-- `upcoming`: `true` μόνο για το επόμενο session
-
-Το τελευταίο session είναι αυτό που εμφανίζεται ως Upcoming.
+All session content lives in `data/sessions.json`. Add/edit the `title` and `events` array. Set `upcoming: true` only on the next session.
 
 ## GitHub Pages
 
-Αν το repository είναι public, μπορείς να ενεργοποιήσεις **Settings → Pages → Deploy from a branch** και να επιλέξεις το branch που περιέχει αυτά τα αρχεία, με folder `/ (root)`.
+Push the files to a repository and enable **Settings → Pages → Deploy from a branch**, using the branch containing the site and `/ (root)`.
 
-Δεν χρειάζεται build step ή backend.
+No build step or backend is required.

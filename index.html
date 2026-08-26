@@ -7,51 +7,53 @@
   <title>Lost Mines of Phandelver · Party Log</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=EB+Garamond:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grain"></div>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="sigil" aria-hidden="true">✦</div>
-      <p class="eyebrow">THE ADVENTURERS' LOG</p>
-      <h1>Lost Mines of <span>Phandelver</span></h1>
-      <p class="subtitle">Οι ιστορίες της παρέας, μέχρι το επόμενο ταξίδι.</p>
-      <div class="divider"><span>◆</span></div>
-    </div>
-  </header>
+  <div class="background" aria-hidden="true">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+  </div>
 
-  <main>
-    <section class="next-card" aria-labelledby="next-title">
-      <div class="next-copy">
-        <p class="eyebrow">NEXT ADVENTURE</p>
-        <h2 id="next-title">Δεν έχει οριστεί ακόμα</h2>
-        <p id="next-message">Μόλις οριστεί ημερομηνία και ώρα, το countdown θα εμφανιστεί εδώ.</p>
-      </div>
-      <div class="countdown" id="countdown" hidden aria-live="polite">
-        <div><strong id="days">00</strong><span>days</span></div>
-        <div><strong id="hours">00</strong><span>hours</span></div>
-        <div><strong id="minutes">00</strong><span>minutes</span></div>
-        <div><strong id="seconds">00</strong><span>seconds</span></div>
-      </div>
-    </section>
+  <div class="page">
+    <header>
+      <div class="brand">✦ The Adventurers' Log ✦</div>
+    </header>
 
-    <section class="timeline-section" aria-labelledby="log-title">
-      <div class="section-heading">
-        <p class="eyebrow">THE CHRONICLE</p>
-        <h2 id="log-title">Το Χρονικό</h2>
-        <p>Όσα συνέβησαν, όσα άλλαξαν — και όσα δεν πρέπει να ξεχαστούν.</p>
-      </div>
-      <div id="timeline" class="timeline"></div>
-    </section>
-  </main>
+    <main>
+      <section class="hero container">
+        <div class="eyebrow">The road continues</div>
+        <h1>Lost Mines of<br><span>Phandelver</span></h1>
+        <p class="subtitle">Μια ιστορία από δρόμους, σκοτεινά περάσματα, απρόσμενες συμμαχίες και αποφάσεις που αφήνουν σημάδι.</p>
+        <div class="divider"></div>
 
-  <footer>
-    <span>✦</span>
-    <span>Keep the fire burning.</span>
-    <span>✦</span>
-  </footer>
+        <div class="countdown-area" id="countdown-area">
+          <div class="countdown-label">Time Until We Play</div>
+          <div class="countdown" id="countdown" hidden>
+            <div class="unit"><span class="number" id="days">00</span><span class="unit-label">Days</span></div>
+            <div class="unit"><span class="number" id="hours">00</span><span class="unit-label">Hours</span></div>
+            <div class="unit"><span class="number" id="minutes">00</span><span class="unit-label">Minutes</span></div>
+            <div class="unit"><span class="number" id="seconds">00</span><span class="unit-label">Seconds</span></div>
+          </div>
+          <div class="target" id="target"></div>
+          <div class="no-date" id="no-date">Το επόμενο ραντεβού δεν έχει οριστεί ακόμα.</div>
+        </div>
+      </section>
+
+      <section class="journey container">
+        <div class="section-heading">
+          <div class="small">Chronicle of the Party</div>
+          <h2>Το Χρονικό</h2>
+          <p>Όσα συνέβησαν</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+    </main>
+
+    <footer>✦ Keep the fire burning · Phandalin awaits ✦</footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
