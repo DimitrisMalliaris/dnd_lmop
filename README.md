@@ -2,6 +2,8 @@
 
 Static GitHub Pages site for the party's shared log.
 
+[https://dimitrismalliaris.github.io/dnd_lmop/]
+
 ## Update the next session
 
 Edit `data/sessions.json`:
